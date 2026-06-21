@@ -1,26 +1,71 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #060606;
+  --foreground: #f5f5f5;
+  --ember: #ff3b1f;
+  --flame: #e11d2a;
+  --ash: #0d0d0d;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-ember: var(--ember);
+  --color-flame: var(--flame);
+  --color-ash: var(--ash);
+  --font-sans: var(--font-sans-custom);
+  --font-display: var(--font-display-custom);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans-custom), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--flame);
+  color: #fff;
+}
+
+/* Subtle ember glow used across the site */
+.text-gradient-fire {
+  background: linear-gradient(120deg, #ff6a3d 0%, #ff3b1f 40%, #e11d2a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(255, 59, 31, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 59, 31, 0.05) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+.glow-ring {
+  box-shadow: 0 0 0 1px rgba(255, 59, 31, 0.25), 0 20px 60px -20px rgba(225, 29, 42, 0.45);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#e11d2a, #7a0d14);
+  border-radius: 6px;
 }
