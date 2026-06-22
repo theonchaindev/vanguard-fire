@@ -5,63 +5,63 @@ import { Reveal, Stagger, StaggerItem } from "@/components/Motion";
 import { stats } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: "About Us",
   description:
-    "27 years of engineered fire protection. Directly employed engineers, third-party accreditation and a safety-first culture.",
+    "Surtur Fire are trusted UK experts in the supply, maintenance and design of fire safety systems, operating at the highest standards of safety and service.",
 };
 
 const values = [
   {
-    t: "Life safety first",
-    d: "Every decision is measured against one question: does this keep people safe? Compliance is the floor, not the ceiling.",
+    t: "Highest standards",
+    d: "We operate at the highest standards of safety and service, so our clients have the peace of mind and ongoing support their organisation demands.",
   },
   {
-    t: "Engineered, not estimated",
-    d: "Systems are hydraulically calculated and fully designed in-house — never specified by guesswork or rule of thumb.",
+    t: "Expertly designed",
+    d: "We are experts in the supply, maintenance and design of fire safety systems, tailored to safeguard your premises against the dangers of fire.",
   },
   {
-    t: "Directly employed",
-    d: "Our engineers are on our payroll, not subcontracted, so accountability and quality stay with us from survey to sign-off.",
+    t: "BAFE qualified",
+    d: "Our engineers are BAFE qualified to install, service and maintain your systems — fully certificated and compliant.",
   },
   {
-    t: "Whole-life support",
-    d: "We don't disappear at handover. Planned maintenance and 24/7 callout keep your systems reliable for decades.",
+    t: "Ongoing support",
+    d: "We don't disappear at handover. We service and maintain your systems to keep you protected and compliant year after year.",
   },
 ];
 
-const accreditations = ["BAFE SP203", "FIA", "LPCB", "ISO 9001", "ISO 45001", "SafeContractor"];
+const accreditations = ["BAFE", "Safe Contractor", "LPCG", "FIA"];
 
 export default function AboutPage() {
   return (
     <>
       <PageHeader
         eyebrow="Who we are"
-        title="SurturFire Fire Protection"
-        subtitle="A specialist fire engineering contractor protecting UK commercial, industrial and high-risk assets since 1997."
+        title="About Surtur Fire"
+        subtitle="Protecting people and businesses across the UK — trusted experts in the supply, maintenance and design of fire safety systems."
       />
 
       <section className="mx-auto max-w-7xl px-5 sm:px-8 pb-8">
         <div className="grid gap-12 lg:grid-cols-2">
           <Reveal>
             <h2 className="font-display text-3xl md:text-4xl uppercase tracking-tight">
-              Built around reliability
+              Your safety is our priority
             </h2>
-            <div className="mt-5 space-y-4 text-white/60 leading-relaxed">
+            <div className="mt-5 space-y-4 text-white/65 leading-relaxed">
               <p>
-                SurturFire was founded on a simple frustration: too many fire
-                systems were installed to tick a box and never thought about
-                again. We set out to be the contractor that engineers protection
-                properly and stands behind it for the life of the building.
+                Trusted by clients across the UK, Surtur Fire are experts in the
+                supply, maintenance and design of fire safety systems to
+                safeguard against the dangers of fire.
               </p>
               <p>
-                Today we deliver active and passive fire protection across data
-                centres, logistics, healthcare, residential and heavy industry —
-                from a single accountable team that designs, installs,
-                commissions and maintains everything we touch.
+                From fire suppression and detection to extinguishers and
+                emergency lighting, we deliver a complete fire protection service
+                for businesses and homes — installing, servicing and maintaining
+                systems that suit every type of premises.
               </p>
               <p>
-                Our work is third-party certificated and independently audited,
-                so the certificate on your wall actually means something.
+                We operate at the highest standards of safety and service, to
+                ensure that our clients have the peace of mind and ongoing
+                support that their organisation demands.
               </p>
             </div>
           </Reveal>

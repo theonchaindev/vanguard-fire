@@ -15,9 +15,9 @@ export default function ServicesPage() {
   return (
     <>
       <PageHeader
-        eyebrow="Capabilities"
-        title="Active & passive fire protection"
-        subtitle="One accountable contractor for design, installation, commissioning and maintenance across every discipline of fire safety."
+        eyebrow="What we do"
+        title="Our fire safety services"
+        subtitle="Experts in the supply, maintenance and design of fire safety systems — installing, servicing and maintaining protection for every type of premises."
       />
 
       <div className="mx-auto max-w-7xl px-5 sm:px-8 pb-28 space-y-6">
@@ -47,7 +47,7 @@ export default function ServicesPage() {
                   href="/contact"
                   className="mt-7 inline-flex items-center gap-2 rounded-full bg-flame px-6 py-3 font-semibold text-white hover:bg-ember transition-colors"
                 >
-                  Enquire about {s.title.split(" ")[0].toLowerCase()} →
+                  Enquire about {s.title.toLowerCase()} →
                 </Link>
               </div>
 

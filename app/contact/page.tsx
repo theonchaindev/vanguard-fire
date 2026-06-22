@@ -5,12 +5,10 @@ import { motion } from "framer-motion";
 import PageHeader from "@/components/PageHeader";
 
 const services = [
-  "Sprinkler Systems",
-  "Gas Suppression",
-  "Detection & Alarms",
-  "Passive Protection",
-  "Extinguishers & Risers",
-  "Maintenance Contract",
+  "Fire Suppression",
+  "Fire Detection",
+  "Fire Extinguishers",
+  "Emergency Lighting",
 ];
 
 export default function ContactPage() {
@@ -21,7 +19,7 @@ export default function ContactPage() {
       <PageHeader
         eyebrow="Get in touch"
         title="Let's talk fire safety"
-        subtitle="Tell us about your building and we'll come back within one working day with the right approach — or call our 24/7 line for emergencies."
+        subtitle="Stay protected with Surtur Fire. Tell us about your premises and we'll come back within one working day — your safety is our priority."
       />
 
       <section className="mx-auto max-w-7xl px-5 sm:px-8 pb-28">
@@ -44,7 +42,7 @@ export default function ContactPage() {
                 <p className="mt-2 max-w-md text-white/60">
                   Thanks — a fire engineer will be in touch within one working
                   day. For anything urgent, call{" "}
-                  <span className="text-flame">0800 000 0000</span>.
+                  <span className="text-flame">+44 7843 841219</span>.
                 </p>
                 <button
                   onClick={() => setSent(false)}
@@ -119,21 +117,21 @@ export default function ContactPage() {
           >
             {[
               {
-                t: "24/7 Emergency",
-                v: "0800 000 0000",
-                d: "Round-the-clock reactive callout",
-                href: "tel:+448000000000",
+                t: "Call us",
+                v: "+44 7843 841219",
+                d: "Speak to our team direct",
+                href: "tel:+447843841219",
               },
               {
                 t: "Email",
-                v: "hello@surturfire.co.uk",
+                v: "sales@surturfire.com",
                 d: "General enquiries & quotes",
-                href: "mailto:hello@surturfire.co.uk",
+                href: "mailto:sales@surturfire.com",
               },
               {
-                t: "Head Office",
-                v: "Unit 7, Forge Park",
-                d: "Daventry, Northamptonshire",
+                t: "Office",
+                v: "22-24 Harborough Road",
+                d: "Northampton, NN2 7AZ",
               },
             ].map((c) => (
               <div
@@ -164,8 +162,8 @@ export default function ContactPage() {
                 Coverage
               </p>
               <p className="mt-2 text-sm text-white/60">
-                Nationwide UK coverage with engineers based across the Midlands,
-                North West and South East for rapid response.
+                Trusted by clients across the UK, with engineers operating
+                nationwide from our Northampton base.
               </p>
             </div>
           </motion.div>

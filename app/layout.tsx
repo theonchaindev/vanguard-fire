@@ -18,11 +18,11 @@ const sans = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "SurturFire — Engineered Fire Protection",
-    template: "%s — SurturFire",
+    default: "Surtur Fire — Engineered Fire Protection",
+    template: "%s — Surtur Fire",
   },
   description:
-    "SurturFire Fire Protection designs, installs and maintains life-safety systems: sprinklers, suppression, detection and passive fire protection. BAFE & FIA accredited.",
+    "Surtur Fire are UK experts in the supply, maintenance and design of fire safety systems — fire suppression, detection, extinguishers and emergency lighting. BAFE & FIA accredited.",
   keywords: [
     "fire protection",
     "fire sprinkler systems",

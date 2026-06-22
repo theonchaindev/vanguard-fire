@@ -18,94 +18,64 @@ export type Service = {
 
 export const services: Service[] = [
   {
-    slug: "sprinklers",
-    title: "Automatic Sprinkler Systems",
-    tagline: "Suppress fire at the source, automatically.",
-    description:
-      "Hydraulically calculated wet, dry, pre-action and deluge sprinkler systems designed to BS EN 12845 and LPC Rules. From single retail units to high-bay logistics warehouses.",
-    features: [
-      "Wet, dry & pre-action systems",
-      "Hydraulic calculation & modelling",
-      "ESFR high-bay warehouse design",
-      "Pump house & tank installation",
-    ],
-    icon: "droplet",
-    image: unsplash("1492144534655-ae79c964c9d7"),
-  },
-  {
     slug: "suppression",
-    title: "Gaseous & Special Suppression",
+    title: "Fire Suppression",
     tagline: "Protect what water can't touch.",
     description:
-      "Clean-agent (FM-200, Novec 1230, inert gas) and water-mist suppression for data centres, switch rooms and critical assets where downtime is not an option.",
+      "This highly specialised field demands the most meticulous design and project execution. Surtur Fire install, service and maintain gas suppression systems where water may pose a risk to critical IT infrastructure — keeping your business running.",
     features: [
-      "FM-200 & Novec 1230 clean agent",
-      "Inert gas (IG-55 / IG-541)",
-      "Watermist for plant & turbines",
-      "Kitchen & CNC suppression",
+      "Gas suppression design & install",
+      "Critical IT & server room protection",
+      "Clean-agent systems",
+      "Service & ongoing maintenance",
     ],
     icon: "shield",
     image: unsplash("1516937941344-00b4e0337589"),
   },
   {
     slug: "detection",
-    title: "Fire Detection & Alarms",
+    title: "Fire Detection",
     tagline: "See fire before it spreads.",
     description:
-      "Addressable detection, aspirating smoke detection (ASD) and voice alarm systems engineered to BS 5839, with graphical cause-and-effect and BMS integration.",
+      "Surtur Fire specialises in cutting-edge fire detection for businesses and homes. We provide a wide range of conventional and addressable fire detection and alarm systems to suit all types of premises, using advanced smoke detectors and heat sensors to swiftly identify potential fire hazards.",
     features: [
-      "Addressable L1–L5 systems",
-      "Aspirating (VESDA) detection",
-      "Voice alarm & PAVA",
-      "Cause & effect programming",
+      "Conventional & addressable systems",
+      "Smoke detectors & heat sensors",
+      "Suitable for all premises",
+      "Service & ongoing maintenance",
     ],
     icon: "radar",
     image: unsplash("1542013936693-884638332954"),
   },
   {
-    slug: "passive",
-    title: "Passive Fire Protection",
-    tagline: "Build resistance into the structure.",
-    description:
-      "Fire-stopping, intumescent coatings, fire doors and compartmentation surveys that contain fire and protect escape routes for the required period of resistance.",
-    features: [
-      "Penetration fire-stopping",
-      "Intumescent steel coatings",
-      "Fire door installation & survey",
-      "Compartmentation reporting",
-    ],
-    icon: "wall",
-    image: unsplash("1473308822086-710304d7d30c"),
-  },
-  {
     slug: "extinguishers",
-    title: "Extinguishers & Wet Risers",
+    title: "Fire Extinguishers",
     tagline: "First-response, always ready.",
     description:
-      "Supply, commissioning and servicing of portable extinguishers, hose reels, dry and wet risers and hydrants to BS 5306 — fully certificated and tagged.",
+      "Our engineers are BAFE qualified to install, service and maintain all of your company's portable fire extinguishing needs — fully certificated, tagged and compliant.",
     features: [
-      "Extinguisher supply & service",
-      "Dry & wet riser testing",
-      "Hydrant & hose reel servicing",
-      "BS 5306 certification",
+      "BAFE qualified engineers",
+      "Supply & installation",
+      "Annual service & maintenance",
+      "Full certification & tagging",
     ],
     icon: "spark",
     image: unsplash("1611273426858-450d8e3c9fce"),
   },
   {
-    slug: "maintenance",
-    title: "Maintenance & Compliance",
-    tagline: "Stay protected, stay compliant.",
+    slug: "emergency-lighting",
+    title: "Emergency Lighting",
+    tagline: "Don't be left in the dark.",
     description:
-      "Planned preventative maintenance, 24/7 reactive callout and digital compliance records that keep you on the right side of the Regulatory Reform (Fire Safety) Order.",
+      "At Surtur Fire we install, service and maintain your system to ensure your emergency exit routes have the safe and appropriate lighting required — so everyone can get out safely when it matters most.",
     features: [
-      "Planned maintenance contracts",
-      "24/7 emergency callout",
-      "Digital asset & compliance logs",
-      "Fire risk assessments",
+      "Emergency lighting design",
+      "Installation to current standards",
+      "Exit route illumination",
+      "Service & ongoing maintenance",
     ],
-    icon: "wrench",
-    image: unsplash("1581094288338-2314dddb7ece"),
+    icon: "bulb",
+    image: unsplash("1614064642639-e398cf05badb"),
   },
 ];
 
@@ -228,8 +198,43 @@ export const projects: Project[] = [
 ];
 
 export const stats = [
-  { value: "1,200+", label: "Systems commissioned" },
-  { value: "27 yrs", label: "Protecting UK assets" },
-  { value: "99.98%", label: "Maintenance uptime" },
-  { value: "24/7", label: "Emergency response" },
+  { value: "UK-Wide", label: "Trusted across the UK" },
+  { value: "BAFE", label: "Qualified engineers" },
+  { value: "5.0★", label: "Rated by our clients" },
+  { value: "24/7", label: "Ongoing support" },
+];
+
+export type Testimonial = { name: string; quote: string };
+
+export const testimonials: Testimonial[] = [
+  {
+    name: "Kevin Anderson",
+    quote:
+      "Surtur Fire's expertise in gas suppression systems is unparalleled. Thank you for your commitment to safety and reliability.",
+  },
+  {
+    name: "Olivia Smith",
+    quote:
+      "Surtur Fire brought invaluable peace of mind to our home. The fire detection services were not only skillfully executed but also delivered with courtesy and respect.",
+  },
+  {
+    name: "Terry Malone",
+    quote:
+      "Hats off to Surtur Fire! Your innovative fire detection technology has added an extra layer of security to our establishment. Grateful for your commitment to safety.",
+  },
+  {
+    name: "John Bennett",
+    quote:
+      "Surtur Fire stands out for their exceptional service. The team's professionalism and efficiency make them our top choice for fire protection.",
+  },
+  {
+    name: "Craig Haven",
+    quote:
+      "The expertise of Surtur Fire's team during the gas suppression system installation was truly impressive. They ensured a smooth process from start to finish.",
+  },
+  {
+    name: "Lisa Turner",
+    quote:
+      "A big thank you to Surtur Fire for their prompt response and thorough installation of our fire detection system. Your dedication to our safety is truly commendable.",
+  },
 ];

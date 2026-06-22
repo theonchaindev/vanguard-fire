@@ -4,7 +4,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import FlameMark from "./FlameMark";
 
 const links = [
   { href: "/", label: "Home" },
@@ -40,12 +39,12 @@ export default function Navbar() {
       }`}
     >
       <nav className="mx-auto max-w-7xl px-5 sm:px-8 h-16 md:h-20 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2.5 group">
-          <FlameMark className="h-8 w-8 transition-transform group-hover:scale-110" />
-          <span className="font-display font-bold tracking-tight text-lg md:text-xl uppercase">
-            SurturFire
-            <span className="text-flame">.</span>
-          </span>
+        <Link href="/" className="flex items-center group">
+          <img
+            src="/brand/surturfire-logo.png"
+            alt="Surtur Fire"
+            className="h-9 md:h-10 w-auto transition-transform group-hover:scale-105"
+          />
         </Link>
 
         <div className="hidden md:flex items-center gap-1">

@@ -392,7 +392,7 @@ export default function CalculatorPage() {
               ⚠︎ This calculator provides indicative figures using simplified
               British and international standard formulas. It is not a substitute
               for a full hydraulic calculation, fire risk assessment or
-              engineered design by a competent fire engineer. SurturFire accepts
+              engineered design by a competent fire engineer. Surtur Fire accepts
               no liability for decisions made on these figures.
             </p>
 

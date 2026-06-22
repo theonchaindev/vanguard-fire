@@ -83,23 +83,23 @@ export default function Hero() {
           </span>
 
           <h1 className="mt-6 font-display font-bold uppercase leading-[0.95] tracking-tight text-5xl sm:text-6xl md:text-7xl">
-            Fire protection,
+            Protecting people &amp;
             <br />
-            <span className="text-gradient-fire">engineered to endure.</span>
+            <span className="text-gradient-fire">businesses across the UK.</span>
           </h1>
 
-          <p className="mt-6 max-w-xl text-lg text-white/65 leading-relaxed">
-            We design, install and maintain life-safety systems that protect
-            people, property and continuity — from data centres to high-bay
-            warehouses across the UK.
+          <p className="mt-6 max-w-xl text-lg text-white/70 leading-relaxed">
+            Trusted by clients across the UK, we are experts in the supply,
+            maintenance and design of fire safety systems to safeguard against
+            the dangers of fire.
           </p>
 
           <div className="mt-9 flex flex-col sm:flex-row gap-3">
             <Link
-              href="/calculator"
+              href="/contact"
               className="group inline-flex items-center justify-center gap-2 rounded-full bg-flame px-7 py-3.5 font-semibold text-white hover:bg-ember transition-colors glow-ring"
             >
-              Try the Risk Calculator
+              Get in touch
               <span className="transition-transform group-hover:translate-x-1">→</span>
             </Link>
             <Link

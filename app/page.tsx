@@ -2,6 +2,7 @@ import Link from "next/link";
 import Hero from "@/components/Hero";
 import { Reveal, Stagger, StaggerItem } from "@/components/Motion";
 import ServiceIcon from "@/components/ServiceIcon";
+import Testimonials from "@/components/Testimonials";
 import { services, projects, stats } from "@/lib/data";
 
 export default function Home() {
@@ -32,13 +33,14 @@ export default function Home() {
           <h2 className="mt-3 font-display font-bold uppercase text-4xl md:text-5xl tracking-tight">
             A complete fire safety partner
           </h2>
-          <p className="mt-4 text-white/60 text-lg">
-            Active and passive protection under a single accountable contractor —
-            designed, installed and maintained to the latest British Standards.
+          <p className="mt-4 text-white/65 text-lg">
+            From suppression and detection to extinguishers and emergency
+            lighting — we install, service and maintain fire safety systems to
+            suit all types of premises.
           </p>
         </Reveal>
 
-        <Stagger className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <Stagger className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {services.map((s) => (
             <StaggerItem key={s.slug}>
               <Link
@@ -181,6 +183,9 @@ export default function Home() {
         </Stagger>
       </section>
 
+      {/* Testimonials */}
+      <Testimonials />
+
       {/* CTA */}
       <section className="mx-auto max-w-7xl px-5 sm:px-8 pb-24">
         <Reveal>
@@ -189,19 +194,26 @@ export default function Home() {
             <div className="absolute inset-0 bg-grid opacity-30" />
             <div className="relative max-w-2xl">
               <h2 className="font-display font-bold uppercase text-4xl md:text-5xl tracking-tight">
-                Know your fire risk in minutes
+                Stay protected with Surtur Fire
               </h2>
-              <p className="mt-4 text-lg text-white/65">
-                Use our in-depth fire protection calculator to estimate water
-                demand, detector coverage, suppression agent volume and indicative
-                cost for your building.
+              <p className="mt-4 text-lg text-white/70">
+                Get in touch today — your safety is our priority. Or explore our
+                fire protection calculator to size up your premises in minutes.
               </p>
-              <Link
-                href="/calculator"
-                className="mt-8 inline-flex items-center gap-2 rounded-full bg-flame px-7 py-3.5 font-semibold text-white hover:bg-ember transition-colors glow-ring"
-              >
-                Launch the Calculator →
-              </Link>
+              <div className="mt-8 flex flex-col sm:flex-row gap-3">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-flame px-7 py-3.5 font-semibold text-white hover:bg-ember transition-colors glow-ring"
+                >
+                  Get in touch →
+                </Link>
+                <Link
+                  href="/calculator"
+                  className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 px-7 py-3.5 font-semibold text-white/90 hover:border-white/40 hover:bg-white/5 transition-colors"
+                >
+                  Try the calculator
+                </Link>
+              </div>
             </div>
           </div>
         </Reveal>
