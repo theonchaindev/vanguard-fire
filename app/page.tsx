@@ -43,34 +43,44 @@ export default function Home() {
             <StaggerItem key={s.slug}>
               <Link
                 href={`/services#${s.slug}`}
-                className="group block h-full rounded-2xl border border-white/8 bg-white/[0.02] p-7 transition-all hover:border-flame/40 hover:bg-white/[0.04]"
+                className="group block h-full overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] transition-all hover:border-flame/40 hover:bg-white/[0.05]"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-flame/10 text-flame ring-1 ring-flame/20 transition-colors group-hover:bg-flame group-hover:text-white">
-                  <ServiceIcon name={s.icon} className="h-6 w-6" />
+                <div className="relative h-44 overflow-hidden">
+                  <img
+                    src={s.image}
+                    alt={s.title}
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-ash via-ash/30 to-transparent" />
+                  <div className="absolute bottom-4 left-4 flex h-12 w-12 items-center justify-center rounded-xl bg-flame text-white ring-1 ring-white/20 shadow-lg">
+                    <ServiceIcon name={s.icon} className="h-6 w-6" />
+                  </div>
                 </div>
-                <h3 className="mt-5 font-display text-xl uppercase tracking-tight">
-                  {s.title}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-white/55">
-                  {s.tagline}
-                </p>
-                <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-flame opacity-0 -translate-x-2 transition-all group-hover:opacity-100 group-hover:translate-x-0">
-                  Learn more →
-                </span>
+                <div className="p-7">
+                  <h3 className="font-display text-xl uppercase tracking-tight">
+                    {s.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-white/60">
+                    {s.tagline}
+                  </p>
+                  <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-flame opacity-0 -translate-x-2 transition-all group-hover:opacity-100 group-hover:translate-x-0">
+                    Learn more →
+                  </span>
+                </div>
               </Link>
             </StaggerItem>
           ))}
         </Stagger>
       </section>
 
-      {/* Process */}
-      <section className="border-y border-white/5 bg-ash/40">
+      {/* Process — light smoke band */}
+      <section className="section-smoke">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 py-24">
           <Reveal className="max-w-2xl">
             <p className="text-flame font-semibold uppercase tracking-widest text-sm">
               How we work
             </p>
-            <h2 className="mt-3 font-display font-bold uppercase text-4xl md:text-5xl tracking-tight">
+            <h2 className="mt-3 font-display font-bold uppercase text-4xl md:text-5xl tracking-tight text-[#16171b]">
               From survey to certification
             </h2>
           </Reveal>
@@ -99,14 +109,14 @@ export default function Home() {
               },
             ].map((step) => (
               <StaggerItem key={step.n}>
-                <div className="relative h-full rounded-2xl border border-white/8 bg-background/40 p-7">
-                  <span className="font-display text-5xl font-bold text-flame/25">
+                <div className="relative h-full rounded-2xl border border-black/10 bg-white p-7 shadow-sm">
+                  <span className="font-display text-5xl font-bold text-flame/30">
                     {step.n}
                   </span>
-                  <h3 className="mt-3 font-display text-lg uppercase tracking-tight">
+                  <h3 className="mt-3 font-display text-lg uppercase tracking-tight text-[#16171b]">
                     {step.t}
                   </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-white/55">
+                  <p className="mt-2 text-sm leading-relaxed text-[#52555e]">
                     {step.d}
                   </p>
                 </div>
@@ -144,14 +154,14 @@ export default function Home() {
                 href={`/projects#${p.slug}`}
                 className="group block h-full overflow-hidden rounded-2xl border border-white/8 bg-white/[0.02] transition-all hover:border-flame/40"
               >
-                <div
-                  className="h-40 relative overflow-hidden"
-                  style={{
-                    background: `radial-gradient(120% 120% at 20% 0%, ${p.accent}40, transparent 55%), linear-gradient(160deg,#141414,#0a0a0a)`,
-                  }}
-                >
-                  <div className="absolute inset-0 bg-grid opacity-40" />
-                  <span className="absolute bottom-4 left-5 rounded-full bg-black/40 backdrop-blur px-3 py-1 text-xs font-medium text-white/80">
+                <div className="h-44 relative overflow-hidden">
+                  <img
+                    src={p.image}
+                    alt={p.name}
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-ash/95 via-ash/30 to-transparent" />
+                  <span className="absolute bottom-4 left-5 rounded-full bg-black/50 backdrop-blur px-3 py-1 text-xs font-medium text-white/90">
                     {p.scope}
                   </span>
                 </div>

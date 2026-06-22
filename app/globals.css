@@ -6,6 +6,8 @@
   --ember: #ff3b1f;
   --flame: #e11d2a;
   --ash: #0d0d0d;
+  --smoke: #f3f4f6;
+  --smoke-deep: #e6e8ec;
 }
 
 @theme inline {
@@ -14,6 +16,8 @@
   --color-ember: var(--ember);
   --color-flame: var(--flame);
   --color-ash: var(--ash);
+  --color-smoke: var(--smoke);
+  --color-smoke-deep: var(--smoke-deep);
   --font-sans: var(--font-sans-custom);
   --font-display: var(--font-display-custom);
 }
@@ -45,6 +49,17 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+
+/* Light "smoke" band — gives the dark site some breathing white/grey space */
+.section-smoke {
+  background: linear-gradient(180deg, #f6f7f9 0%, #e6e8ec 100%);
+  color: #16171b;
+}
+.section-smoke .bg-grid {
+  background-image:
+    linear-gradient(rgba(20, 20, 25, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(20, 20, 25, 0.05) 1px, transparent 1px);
 }
 
 .bg-grid {

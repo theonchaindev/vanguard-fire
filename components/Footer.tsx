@@ -31,7 +31,7 @@ export default function Footer() {
             <Link href="/" className="flex items-center gap-2.5">
               <FlameMark className="h-8 w-8" />
               <span className="font-display font-bold tracking-tight text-xl uppercase">
-                Vanguard<span className="text-flame">.</span>
+                SurturFire<span className="text-flame">.</span>
               </span>
             </Link>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/55">
@@ -74,7 +74,7 @@ export default function Footer() {
 
         <div className="mt-12 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-t border-white/5 pt-6">
           <p className="text-xs text-white/40">
-            © {new Date().getFullYear()} Vanguard Fire Protection Ltd. All rights
+            © {new Date().getFullYear()} SurturFire Fire Protection Ltd. All rights
             reserved.
           </p>
           <p className="text-xs text-white/40">

@@ -1,4 +1,4 @@
-# Vanguard Fire Protection
+# SurturFire Fire Protection
 
 A clean, black-and-red marketing site for a UK fire protection contractor, featuring an in-depth, interactive **fire protection calculator**.
 
@@ -23,7 +23,6 @@ Built with **Next.js 16** (App Router), **Tailwind CSS v4**, **TypeScript** and 
 - **Detection & alarm** — detector / call-point / sounder / zone counts (BS 5839-1)
 - **Gaseous suppression** — clean-agent mass (Novec 1230, FM-200) or inert-gas volume (IG-55) from the standard ISO 14520 / NFPA 2001 formulas
 - **Portable extinguishers** — type split and counts (BS 5306-8)
-- **Indicative installed cost** — itemised budgetary estimate
 
 All formulas live in [`lib/fire.ts`](lib/fire.ts). Figures are indicative for early planning only — not a substitute for an engineered design.
 

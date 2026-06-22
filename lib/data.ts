@@ -1,3 +1,11 @@
+/** Build a sized Unsplash URL from a photo id. */
+export function unsplash(id: string, w = 1200) {
+  return `https://images.unsplash.com/photo-${id}?w=${w}&q=80&auto=format&fit=crop`;
+}
+
+/** Full-bleed fire imagery used behind the hero. */
+export const heroImage = unsplash("1504328345606-18bbc8c9d7d1", 2000);
+
 export type Service = {
   slug: string;
   title: string;
@@ -5,6 +13,7 @@ export type Service = {
   description: string;
   features: string[];
   icon: string; // emoji-free icon key handled in component
+  image: string;
 };
 
 export const services: Service[] = [
@@ -21,6 +30,7 @@ export const services: Service[] = [
       "Pump house & tank installation",
     ],
     icon: "droplet",
+    image: unsplash("1492144534655-ae79c964c9d7"),
   },
   {
     slug: "suppression",
@@ -35,6 +45,7 @@ export const services: Service[] = [
       "Kitchen & CNC suppression",
     ],
     icon: "shield",
+    image: unsplash("1516937941344-00b4e0337589"),
   },
   {
     slug: "detection",
@@ -49,6 +60,7 @@ export const services: Service[] = [
       "Cause & effect programming",
     ],
     icon: "radar",
+    image: unsplash("1542013936693-884638332954"),
   },
   {
     slug: "passive",
@@ -63,6 +75,7 @@ export const services: Service[] = [
       "Compartmentation reporting",
     ],
     icon: "wall",
+    image: unsplash("1473308822086-710304d7d30c"),
   },
   {
     slug: "extinguishers",
@@ -77,6 +90,7 @@ export const services: Service[] = [
       "BS 5306 certification",
     ],
     icon: "spark",
+    image: unsplash("1611273426858-450d8e3c9fce"),
   },
   {
     slug: "maintenance",
@@ -91,6 +105,7 @@ export const services: Service[] = [
       "Fire risk assessments",
     ],
     icon: "wrench",
+    image: unsplash("1581094288338-2314dddb7ece"),
   },
 ];
 
@@ -104,11 +119,13 @@ export type Project = {
   stat: { label: string; value: string }[];
   summary: string;
   accent: string;
+  image: string;
 };
 
 export const projects: Project[] = [
   {
     slug: "meridian-data-centre",
+    image: unsplash("1558494949-ef010cbdcc31"),
     name: "Meridian Tier III Data Centre",
     sector: "Data Centre",
     location: "Slough, UK",
@@ -125,6 +142,7 @@ export const projects: Project[] = [
   },
   {
     slug: "northgate-logistics",
+    image: unsplash("1558618666-fcd25c85cd64"),
     name: "Northgate Logistics Hub",
     sector: "Warehouse",
     location: "Daventry, UK",
@@ -141,6 +159,7 @@ export const projects: Project[] = [
   },
   {
     slug: "regent-tower",
+    image: unsplash("1486406146926-c627a92ad1ab"),
     name: "Regent Tower Residential",
     sector: "Residential",
     location: "Manchester, UK",
@@ -157,6 +176,7 @@ export const projects: Project[] = [
   },
   {
     slug: "ashford-foundry",
+    image: unsplash("1581094794329-c8112a89af12"),
     name: "Ashford Steel Foundry",
     sector: "Industrial",
     location: "Sheffield, UK",
@@ -173,6 +193,7 @@ export const projects: Project[] = [
   },
   {
     slug: "harbour-retail",
+    image: unsplash("1504917595217-d4dc5ebe6122"),
     name: "Harbour Point Retail Park",
     sector: "Retail",
     location: "Bristol, UK",
@@ -189,6 +210,7 @@ export const projects: Project[] = [
   },
   {
     slug: "summit-hospital",
+    image: unsplash("1538108149393-fbbd81895907"),
     name: "Summit NHS Treatment Centre",
     sector: "Healthcare",
     location: "Leeds, UK",

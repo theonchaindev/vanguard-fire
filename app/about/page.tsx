@@ -36,7 +36,7 @@ export default function AboutPage() {
     <>
       <PageHeader
         eyebrow="Who we are"
-        title="Vanguard Fire Protection"
+        title="SurturFire Fire Protection"
         subtitle="A specialist fire engineering contractor protecting UK commercial, industrial and high-risk assets since 1997."
       />
 
@@ -48,7 +48,7 @@ export default function AboutPage() {
             </h2>
             <div className="mt-5 space-y-4 text-white/60 leading-relaxed">
               <p>
-                Vanguard was founded on a simple frustration: too many fire
+                SurturFire was founded on a simple frustration: too many fire
                 systems were installed to tick a box and never thought about
                 again. We set out to be the contractor that engineers protection
                 properly and stands behind it for the life of the building.
@@ -104,20 +104,20 @@ export default function AboutPage() {
         </Stagger>
       </section>
 
-      <section className="border-y border-white/5 bg-ash/40">
+      <section className="section-smoke">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 py-16">
           <Reveal className="text-center">
             <p className="text-flame font-semibold uppercase tracking-widest text-sm">
               Accreditations
             </p>
-            <h2 className="mt-3 font-display text-3xl uppercase tracking-tight">
+            <h2 className="mt-3 font-display text-3xl uppercase tracking-tight text-[#16171b]">
               Independently certificated
             </h2>
           </Reveal>
           <Stagger className="mt-10 flex flex-wrap justify-center gap-3">
             {accreditations.map((a) => (
               <StaggerItem key={a}>
-                <span className="rounded-full border border-white/10 bg-background/40 px-6 py-3 font-display uppercase tracking-wide text-white/80">
+                <span className="rounded-full border border-black/10 bg-white px-6 py-3 font-display uppercase tracking-wide text-[#16171b] shadow-sm">
                   {a}
                 </span>
               </StaggerItem>

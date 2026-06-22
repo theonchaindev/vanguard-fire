@@ -12,8 +12,6 @@ import {
   calcDetection,
   calcSuppression,
   calcExtinguishers,
-  calcCost,
-  gbp,
   type HazardKey,
   type DetectorKey,
   type AgentKey,
@@ -53,38 +51,13 @@ export default function CalculatorPage() {
     () => calcExtinguishers(area, floors),
     [area, floors]
   );
-  const cost = useMemo(
-    () =>
-      calcCost({
-        area,
-        floors,
-        sprinklers,
-        detection,
-        suppression,
-        includeSprinklers: useSprinklers,
-        includeDetection: useDetection,
-        includeSuppression: useSuppression,
-        includePassive: usePassive,
-      }),
-    [
-      area,
-      floors,
-      sprinklers,
-      detection,
-      suppression,
-      useSprinklers,
-      useDetection,
-      useSuppression,
-      usePassive,
-    ]
-  );
 
   return (
     <>
       <PageHeader
         eyebrow="Free tool"
         title="Fire protection calculator"
-        subtitle="Estimate sprinkler water demand, detection coverage, suppression agent volume, extinguisher counts and indicative cost. Indicative only — always confirm with a fire engineer."
+        subtitle="Estimate sprinkler water demand, detection coverage, suppression agent volume and extinguisher counts. Indicative only — always confirm with a fire engineer."
       />
 
       <section className="mx-auto max-w-7xl px-5 sm:px-8 pb-28">
@@ -248,7 +221,7 @@ export default function CalculatorPage() {
 
           {/* -------------------------- RESULTS -------------------------- */}
           <div className="space-y-6">
-            {/* Headline cost */}
+            {/* Headline summary */}
             <motion.div
               layout
               className="relative overflow-hidden rounded-3xl border border-flame/25 p-8 md:p-10"
@@ -257,26 +230,37 @@ export default function CalculatorPage() {
               <div className="absolute inset-0 bg-grid opacity-25" />
               <div className="relative">
                 <p className="text-xs uppercase tracking-widest text-flame">
-                  Indicative installed cost
+                  Design summary
                 </p>
-                <div className="mt-2 font-display text-5xl md:text-6xl font-bold text-gradient-fire">
-                  <AnimatedNumber value={cost.total} prefix="£" />
+                <div className="mt-2 font-display text-4xl md:text-5xl font-bold">
+                  <span className="text-gradient-fire">
+                    <AnimatedNumber value={area * floors} suffix=" m²" />
+                  </span>{" "}
+                  <span className="text-white/70">gross protected</span>
                 </div>
-                <p className="mt-2 text-sm text-white/50">
-                  {(area * floors).toLocaleString("en-GB")} m² gross ·{" "}
-                  {hazardClasses[hazard].label} · budgetary estimate ±25%
+                <p className="mt-2 text-sm text-white/55">
+                  {hazardClasses[hazard].label} · {floors} storey
+                  {floors > 1 ? "s" : ""} · {area.toLocaleString("en-GB")} m² per
+                  floor
                 </p>
 
-                <div className="mt-6 space-y-2">
-                  {cost.lines.map((l) => (
-                    <div
-                      key={l.label}
-                      className="flex items-center justify-between border-b border-white/5 pb-2 text-sm"
-                    >
-                      <span className="text-white/60">{l.label}</span>
-                      <span className="font-medium">{gbp(l.value)}</span>
-                    </div>
-                  ))}
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {[
+                    useSprinklers && "Sprinklers",
+                    useDetection && "Detection",
+                    useSuppression && "Suppression",
+                    usePassive && "Passive",
+                    "Extinguishers",
+                  ]
+                    .filter(Boolean)
+                    .map((tag) => (
+                      <span
+                        key={tag as string}
+                        className="rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-medium text-white/80"
+                      >
+                        {tag}
+                      </span>
+                    ))}
                 </div>
               </div>
             </motion.div>
@@ -405,11 +389,11 @@ export default function CalculatorPage() {
             </ResultCard>
 
             <p className="rounded-2xl border border-white/8 bg-white/[0.02] p-5 text-xs text-white/40 leading-relaxed">
-              ⚠︎ This calculator provides indicative budgetary figures using
-              simplified British and international standard formulas. It is not a
-              substitute for a full hydraulic calculation, fire risk assessment
-              or engineered design by a competent fire engineer. Vanguard Fire
-              Protection accepts no liability for decisions made on these figures.
+              ⚠︎ This calculator provides indicative figures using simplified
+              British and international standard formulas. It is not a substitute
+              for a full hydraulic calculation, fire risk assessment or
+              engineered design by a competent fire engineer. SurturFire accepts
+              no liability for decisions made on these figures.
             </p>
 
             <a

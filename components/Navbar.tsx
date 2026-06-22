@@ -43,7 +43,7 @@ export default function Navbar() {
         <Link href="/" className="flex items-center gap-2.5 group">
           <FlameMark className="h-8 w-8 transition-transform group-hover:scale-110" />
           <span className="font-display font-bold tracking-tight text-lg md:text-xl uppercase">
-            Vanguard
+            SurturFire
             <span className="text-flame">.</span>
           </span>
         </Link>

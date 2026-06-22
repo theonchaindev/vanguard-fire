@@ -51,18 +51,28 @@ export default function ServicesPage() {
                 </Link>
               </div>
 
-              <div className="rounded-2xl border border-white/8 bg-background/40 p-7">
-                <p className="text-xs uppercase tracking-widest text-white/40">
-                  Included
-                </p>
-                <ul className="mt-4 space-y-3">
-                  {s.features.map((f) => (
-                    <li key={f} className="flex items-start gap-3">
-                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-flame" />
-                      <span className="text-white/75">{f}</span>
-                    </li>
-                  ))}
-                </ul>
+              <div className="space-y-5">
+                <div className="relative h-48 overflow-hidden rounded-2xl border border-white/10">
+                  <img
+                    src={s.image}
+                    alt={s.title}
+                    className="h-full w-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-ash/70 to-transparent" />
+                </div>
+                <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-7">
+                  <p className="text-xs uppercase tracking-widest text-white/50">
+                    Included
+                  </p>
+                  <ul className="mt-4 space-y-3">
+                    {s.features.map((f) => (
+                      <li key={f} className="flex items-start gap-3">
+                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-flame" />
+                        <span className="text-white/80">{f}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </article>
           </Reveal>

@@ -3,6 +3,7 @@ import { Oswald, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import FloatingCTA from "@/components/FloatingCTA";
 
 const display = Oswald({
   variable: "--font-display-custom",
@@ -17,11 +18,11 @@ const sans = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Vanguard Fire Protection — Engineered Fire Safety",
-    template: "%s — Vanguard Fire Protection",
+    default: "SurturFire — Engineered Fire Protection",
+    template: "%s — SurturFire",
   },
   description:
-    "Vanguard Fire Protection designs, installs and maintains life-safety systems: sprinklers, suppression, detection and passive fire protection. BAFE & FIA accredited.",
+    "SurturFire Fire Protection designs, installs and maintains life-safety systems: sprinklers, suppression, detection and passive fire protection. BAFE & FIA accredited.",
   keywords: [
     "fire protection",
     "fire sprinkler systems",
@@ -44,6 +45,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-background">
         <Navbar />
         <main className="flex-1">{children}</main>
+        <FloatingCTA />
         <Footer />
       </body>
     </html>

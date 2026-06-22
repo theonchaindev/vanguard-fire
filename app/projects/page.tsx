@@ -27,13 +27,13 @@ export default function ProjectsPage() {
                 id={p.slug}
                 className="scroll-mt-28 group h-full overflow-hidden rounded-3xl border border-white/8 bg-white/[0.02] transition-colors hover:border-flame/40"
               >
-                <div
-                  className="relative h-48 overflow-hidden"
-                  style={{
-                    background: `radial-gradient(120% 130% at 15% 0%, ${p.accent}45, transparent 55%), linear-gradient(160deg,#161616,#0a0a0a)`,
-                  }}
-                >
-                  <div className="absolute inset-0 bg-grid opacity-40" />
+                <div className="relative h-56 overflow-hidden">
+                  <img
+                    src={p.image}
+                    alt={p.name}
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-ash via-ash/40 to-ash/10" />
                   <div className="absolute top-5 left-6 flex gap-2">
                     <span className="rounded-full bg-black/50 backdrop-blur px-3 py-1 text-xs font-medium text-white/85">
                       {p.sector}

@@ -126,9 +126,9 @@ export default function ContactPage() {
               },
               {
                 t: "Email",
-                v: "hello@vanguardfire.co.uk",
+                v: "hello@surturfire.co.uk",
                 d: "General enquiries & quotes",
-                href: "mailto:hello@vanguardfire.co.uk",
+                href: "mailto:hello@surturfire.co.uk",
               },
               {
                 t: "Head Office",
